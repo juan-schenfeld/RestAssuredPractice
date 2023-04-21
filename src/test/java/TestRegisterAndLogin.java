@@ -4,8 +4,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
-public class TestRegisterAndLogin extends BaseTest{
-
+public class TestRegisterAndLogin extends BaseTest {
     @Test
     public void registerUser() {
         String requestBody = "{\"email\": \"eve.holt@reqres.in\", \"password\": \"pistol\"}";
