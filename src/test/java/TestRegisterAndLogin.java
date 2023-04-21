@@ -1,16 +1,11 @@
 import io.restassured.http.ContentType;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
-public class TestRegisterAndLogin {
+public class TestRegisterAndLogin extends BaseTest{
 
-    @BeforeTest
-    public void setUp(){
-        Utils.setBaseURI();
-    }
     @Test
     public void registerUser() {
         String requestBody = "{\"email\": \"eve.holt@reqres.in\", \"password\": \"pistol\"}";

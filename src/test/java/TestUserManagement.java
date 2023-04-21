@@ -1,18 +1,11 @@
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
-public class TestUserManagement {
-
-    @BeforeTest
-    public void setUp(){
-        Utils.setBaseURI();
-    }
-
+public class TestUserManagement extends BaseTest{
     @Test
     public void testGetUserList() {
         Response response = given()
